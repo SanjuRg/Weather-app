@@ -10,21 +10,69 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f7f3f3;
+    background: linear-gradient(135deg, #00feba, #5b548a);
     color: #333;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+.title-wrapper {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+.currentWeather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* spacing between buttons */
+    margin-top: 20px;
+}
+
+.currentWeatherBtn,
+.searchWeatherBtn {
+    background-color: transparent; /* light purple */
+    color: #333;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 0px;
+    font-size: 20px;
+    font-weight:bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.currentWeatherBtn:hover {
+    background-color: rgba(0, 196, 167, 0.8); 
+  }
 
 .card{
     width: 90%;
-    max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    max-width:470px;
     color: #fff;
-    margin: 100px auto 0;
+    margin: auto; 
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+    flex-grow: 1;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Add spacing between input and button */
+    margin-top: 20px;
 }
 
 .search{
@@ -34,7 +82,7 @@ body {
     justify-content: space-between;
 }
 
-.search input{
+.search-wrapper input{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -48,7 +96,7 @@ body {
 }
 
 
-.search button{
+.search-wrapper button{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -58,7 +106,7 @@ body {
     cursor:pointer;
 }
 
-.search button img{
+.search-wrapper button img{
     width: 16px;
 }
 
